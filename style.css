@@ -6,10 +6,16 @@ body{
     color: rgba(0, 0, 0, 0.6);
     margin: 3rem auto;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-    ""
-    ""
-    ""
+    "navi navi navi"
+    "midd midd midd"
+    "bot bot bot"
     ;
+}
+body > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
