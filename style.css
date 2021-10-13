@@ -6,9 +6,11 @@ body{
     color: rgba(0, 0, 0, 0.6);
     margin: 3rem auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40rem 20rem 20rem 10rem;
     grid-template-areas:
     "navi navi navi"
+    "search search search"
     "midd midd midd"
     "bot bot bot"
     ;
@@ -19,3 +21,37 @@ body > * {
     align-items: center;
 }
 
+.top{
+    grid-area: navi;
+    background-image: url("https://www.rct.uk/sites/default/files/styles/rctr-scale-crop-1600-625/public/mp-gallery-1600-2021.jpg?itok=-SAEV5cg"); 
+    
+}
+
+#image-Search{
+    grid-area: search;
+}
+
+.midd{
+    grid-area: midd;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    padding: 2.3rem;
+}
+
+.pics{
+    padding: 2.3rem;
+}
+
+.bot{
+    grid-area: bot;
+}
+
+@media only screen and (max-width: 700px){
+    [class*="top"]{
+        background-image: url("https://i.guim.co.uk/img/media/027f99e50af24acf75d5f1a881c9db8813b1c990/0_75_4928_2957/master/4928.jpg?width=1200&quality=85&auto=format&fit=max&s=851cf9952544cbbf8472dfc1b5305c5f"); 
+    }
+}
