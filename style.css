@@ -4,10 +4,9 @@ body{
     background-color: #eee;
     font-size: 1.4rem;
     color: rgba(0, 0, 0, 0.6);
-    margin: 3rem auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 40rem 20rem 20rem 10rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40rem 0rem auto 10rem;
     grid-template-areas:
     "navi navi navi"
     "search search search"
@@ -15,6 +14,7 @@ body{
     "bot bot bot"
     ;
 }
+
 body > * {
     display: flex;
     justify-content: center;
@@ -23,12 +23,32 @@ body > * {
 
 .top{
     grid-area: navi;
-    background-image: url("https://www.rct.uk/sites/default/files/styles/rctr-scale-crop-1600-625/public/mp-gallery-1600-2021.jpg?itok=-SAEV5cg"); 
-    
+    background-image: url("https://media-exp1.licdn.com/dms/image/C4D1BAQHcR2gmU7JXDw/company-background_10000/0/1563380235910?e=2159024400&v=beta&t=hxCkw7p7TpKWETgNSTrVDqDC8aKe2Q2BFAwzlqGdcjs");
+}
+
+.navi{
+    right: -60rem;
+    top: -18rem;
+    position: relative;
+}
+
+a{
+    color: black;
+}
+
+.title{
+    color: #000;
+    position: relative;
+    top: 5rem;
+    right: 3rem;
 }
 
 #image-Search{
+    display: flex;
     grid-area: search;
+    position: relative;
+    top: -10rem;
+    right: -3rem;
 }
 
 .midd{
@@ -40,14 +60,26 @@ ul{
     list-style-type: none;
     flex-direction: row;
     padding: 2.3rem;
+    flex-wrap: wrap;
 }
 
 .pics{
-    padding: 2.3rem;
+    padding: 1.2rem;
+    width: 19rem;
+    height: 15rem;
 }
 
 .bot{
     grid-area: bot;
+    background-color: gray;
+}
+
+p{
+    color: black;
+}
+
+script{
+    font-size: 0px;
 }
 
 @media only screen and (max-width: 700px){
